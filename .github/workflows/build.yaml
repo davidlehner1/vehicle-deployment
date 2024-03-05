@@ -16,4 +16,4 @@ jobs:
       - name: Build with Maven
         run: chmod +x ./build.sh
       - name: Create Package
-      - run: ./build.sh
+        run: ./build.sh
