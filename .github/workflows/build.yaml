@@ -7,13 +7,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Login to GitHub Container Registry
-        uses: docker/login-action@v3
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Check out repository code
         uses: actions/checkout@v4
+      - run: |
+          pwd
+          ls -lah
+        working-directory: ./k8s
       - uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
