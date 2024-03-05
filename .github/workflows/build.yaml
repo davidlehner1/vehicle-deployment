@@ -24,5 +24,4 @@ jobs:
           java-version: '21'
           cache: 'maven'
       - name: Build with Maven
-        run: chmod +x ./build.sh 
-              ./build.sh
+        run: ./build.sh
